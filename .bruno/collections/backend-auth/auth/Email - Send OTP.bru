@@ -1,0 +1,23 @@
+meta {
+  name: Email - Send OTP
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{authUrl}}/api/auth/email-otp/send-verification-otp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+body:json {
+  {
+    "email": "{{userEmail}}",
+    "type": "email-verification"
+  }
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Email - Signup
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{authUrl}}/api/auth/sign-up/email
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+body:json {
+  {
+    "email": "{{userEmail}}",
+    "password": "Password123!",
+    "name": "Ahmad Doe"
+  }
+}

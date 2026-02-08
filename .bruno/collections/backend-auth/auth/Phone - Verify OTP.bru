@@ -1,0 +1,23 @@
+meta {
+  name: Phone - Verify OTP
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{authUrl}}/api/auth/phone-number/verify
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+body:json {
+  {
+    "phoneNumber": "+201111111111",
+    "code": "724017"
+  }
+}

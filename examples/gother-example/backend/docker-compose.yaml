@@ -1,0 +1,24 @@
+version: "3.5"
+name: gother-example
+services:
+  postgres:
+    container_name: gother-example-postgres
+    image: postgres:15.2
+    command: -c 'max_connections=500' -c 'fsync=off' -c 'synchronous_commit=off' -c 'wal_level=minimal' -c 'max_wal_senders=0'
+    networks:
+      - gother-example-network
+    environment:
+      - POSTGRES_USER=gother-example
+      - POSTGRES_PASSWORD=gother-example
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+networks:
+  gother-example-network:
+    driver: bridge
+    name: gother-example-network
+
+volumes:
+  postgres_data: {}

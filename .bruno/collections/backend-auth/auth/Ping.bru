@@ -1,0 +1,20 @@
+meta {
+  name: Ping
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{backendUrl}}/ping
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

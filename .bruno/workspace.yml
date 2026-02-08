@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "backend-auth"
+  type: workspace
+
+collections:
+  - name: "backend-auth"
+    path: "collections/backend-auth"
+
+specs:
+
+docs: ''

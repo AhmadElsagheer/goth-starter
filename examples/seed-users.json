@@ -1,0 +1,14 @@
+[
+    {
+        "id": "",
+        "name": "",
+        "email": "",
+        "emailVerified": true,
+        "image": "",
+        "phoneNumber": "",
+        "phoneNumberVerified": true,
+        "roles": [
+            "customer"
+        ]
+    }
+]

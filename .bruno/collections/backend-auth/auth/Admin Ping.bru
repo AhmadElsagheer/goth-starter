@@ -1,0 +1,20 @@
+meta {
+  name: Admin Ping
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{backendUrl}}/admin/ping
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

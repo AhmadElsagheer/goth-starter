@@ -1,0 +1,23 @@
+meta {
+  name: Email - Verify OTP
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{authUrl}}/api/auth/email-otp/verify-email
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+body:json {
+  {
+    "email": "{{userEmail}}",
+    "otp": "643844"
+  }
+}

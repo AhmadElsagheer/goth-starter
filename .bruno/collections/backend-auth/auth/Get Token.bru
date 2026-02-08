@@ -1,0 +1,24 @@
+meta {
+  name: Get Token
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{authUrl}}/api/auth/token
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+auth:bearer {
+  token: {{sessionToken}}
+}
+
+script:post-response {
+  bru.setEnvVar("accessToken", res.body.token)
+}

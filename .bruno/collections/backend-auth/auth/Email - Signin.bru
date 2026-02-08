@@ -1,0 +1,27 @@
+meta {
+  name: Email - Signin
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{authUrl}}/api/auth/sign-in/email
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+  Origin: http://localhost:8787
+}
+
+body:json {
+  {
+    "email": "{{userEmail}}",
+    "password": "Password123!"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("sessionToken", res.body.token);
+}
