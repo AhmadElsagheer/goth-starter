@@ -49,6 +49,8 @@ graph TD
 
 ## 🚀 Quick Start
 
+⚡ [Run the quick start example](./examples/gother-example)
+
 ### Before you start
 - Required tools: go, psql, [sqddl](https://github.com/bokwoon95/sqddl)
 - Go dependencies in the `go-kit`: zap, echo, pgx, sq, fx (you can change or remove them after generation)
