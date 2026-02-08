@@ -58,7 +58,7 @@ graph TD
 ### Install
 1. Set variables
 ```bash
-export USERNAME=AhmadElsagheer
+export GH_USERNAME=ahmad
 export PROJECT_NAME=gother-example
 export GO_BACKEND_PATH=./examples/gother-example/backend
 export AUTH_SERVER_PATH=./examples/gother-example/auth-server
@@ -70,7 +70,7 @@ export DB_URI="postgres://${PROJECT_NAME}:${PROJECT_NAME}@localhost/${PROJECT_NA
 
 2. Create Project
 ```bash
-./create-go-project.sh $USERNAME/$PROJECT_NAME $GO_BACKEND_PATH
+./create-go-project.sh $GH_USERNAME/$PROJECT_NAME $GO_BACKEND_PATH
 ```
 
 3. Run database
